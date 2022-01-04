@@ -1,108 +1,230 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# PP2 - Planet Extinction Survival
+Planet Extinction Survival is a made-up game where the world is about to end and the only one to have yourself is by proving to the AI who has travelled to earth that you can do simple maths. This game is aimed at young adults and adults who have an interest in space, AI and extinction theories and want to test their mental artithmetic skills.
 
-Welcome USER_NAME,
+The site is fully responsive Javascript game where depending on how many questions the user gets right or wrong will depend on the outcome of the game.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[IS MY SITE RESPONSIVE IMAGE]
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+The site is deployed here:
 
-## Gitpod Reminders
+## Planning
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+I then created wireframes using Balsamiq to have a structure to work from when building the actual site. Here are my wireframes
 
-`python3 -m http.server`
+### Home
 
-A blue button should appear to click: _Make Public_,
+![](assets/images/balsamiq-index-html-image.png)
 
-Another blue button should appear to click: _Open Browser_.
+### Survival outcome
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![](assets/images/balsamiq-gallery-html-image.png)
 
-A blue button should appear to click: _Make Public_,
+### Death outcome
 
-Another blue button should appear to click: _Open Browser_.
+![](assets/images/balsamiq-contact-html-image.png)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
 
-To log into the Heroku toolbelt CLI:
+## Existing Features
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## index.html page
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Header
 
-------
+#### Logo
 
-## Release History
+The logo is styled text using .css and is floated left on all pages in the header section but will become centred on smaller screen sizes. This way of creating a logo was picked up in the Love Running project.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The navigation bar is fully responsive also and is floated right on all pages and will allow the user to navigate to the following pages:
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* Home
+* Gallery
+* Contact
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+For medium and smaller screens, the navigation bar centres below the logo.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The pseudo hover CSS class has been used along with an active class when the user is on each page to show which page in the navigation they are on. The navigation bar will also show on all four pages so the user can easily navigate around the site wherever they are.
+See logo and navigation below:
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+![](assets/images/logo-nav-screenshot-image.png)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+#### Banner
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+The banner image displays below the header section (i.e. below the logo and the navigation bar). The intention with the banner image is for the user to be drawn into an emotional response when they first hit the site, ensuring they continue to browse and eventually get in touch to book their own photoshoot. The banner image also scales responsively for medium to smaller screens.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+![](assets/images/banner-screenshot-image.png)
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+### About First Photography
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+This section introduces First Photography and includes a sample image. This spans the width of the screen instead of 50% as I'd originally planned in the wireframe. Once I'd made the initial structure, I didn't like how word heavy it would have been with two text sections side-by-side, so I decided to go with text on the left and an image to the right for this section. The key call-to-action (CTA) on this site in its current iteration is to get in touch to book a photoshoot so I introduced the CTA as soon as I could on the page in this section. For medium and smaller screens, the image appears below the heading and above the text content.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+![](assets/images/about-first-photography-screenshot-image.png)
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### About me
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+This section introduces the photographer, John Smith. I styled this the same as the previous section but flipped round the text to be on the left and the image to be on the right. I also gave it a background colour in-line with the colour scheme to break up the sections and provide a more visually pleasing experience for the user. For medium and smaller screens, the image appears below the heading and above the text content.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+![](assets/images/about-me-screenshot-image.png)
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Services
 
-------
+The final content section again follows a similar style to the two previous sections. I flipped the text and image around again. This time I also introduced a grid of four captioned images to represent some of the services I am discussing in the text content. Again, this styling was aiming to break up the sections and make them more visually pleasing. I included two CTA's in this section - one to take the user to a gallery of example photography and the key CTA to get in touch again. For medium and smaller screens, the image appears stacked on top of each other and below the heading and text content in this instance.
 
-## FAQ about the uptime script
+![](assets/images/our-services-screenshot-image.png)
 
-**Why have you added this script?**
+### Footer section
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The footer section is at the bottom of every page and contains links to social media. Inspiration for this was taken from the Love Running project as I think the minimal sleek Font Awesome icons look great. An extra navigation link to the Contact page is also included as a learned behaviour overtime (especially from corporate sites) is to find contact info in the footer. I felt that the key CTA for users is for them to get in contact to book so repeating the CTA felt worthwhile again here. For medium and smaller screens, the footer reduces in height by 50% to not take up too much space on the screen. Visually it looks much nicer also.
 
-**How will this affect me?**
+![](assets/images/footer-screenshot-image.png)
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+## gallery.html page
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+The header from index.html is repeated on this page for consistency and navigational continuity for the user. I learnt during the IDE module that once a user sees your homepage, they have already learned about your site so by keeping continuity makes it more likely the user will spend longer on the site.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+There is a selection of images taken from Pexels (see Credit section) to represent images the imaginary photographer has taken on previous shoots. The idea behind this is to encourage the user to see photography and be inspired to book in for similar shoots. They are structured in a six 4 row six column structure. I felt this fit large screen widths well. I achieved this using Flexboxes. For medium and smaller screens, the images appear stacked on top of each other. I would have preferred it if there was 2 images side-by-side but from what I could ascertain I would have had to re-code the whole gallery. I learnt a valuable lesson here and in future will take a mobile first approach.
 
-**So….?**
+The footer section is also repeated here for user consistency to again keep reinforcing the CTA's.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+![](assets/images/gallery-screenshot-image.png)
 
-**Can I opt out?**
+## contact.html page
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+The header from index.html is repeated on this page as well and again this is for consistency and navigational continuity for the user.
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+The contact form is aligned to the centre of the page, so the user is drawn straight to it as it is the only content available. I have made all the fields required and included a submit button and a reset form button. So the form can be tested and proved I created a thank-you.html page. When the user fills out the contact form it directs to this page. For medium and smaller screens, the form scales responsively and fills a nice portion of the screen on all screen sizes ensuring the message box isn't unreadable when typing.
 
-**Anything more?**
+The footer section is also repeated on both the contact.html page and thank-you.html page for user consistency to again keep reinforcing the CTA's.
+Screenshot of contact page:
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+![Contact Page Screenshot](assets/images/contact-form-screenshot-image.png)
 
----
+Screenshot of thank you page:
 
-Happy coding!
+![Thank you Page Screenshot](assets/images/thank-you-page-screenshot-image.png)
+
+## Future Features
+
+There are plenty of features I would like to include in future. For example:
+
+* Replace Flexbox on gallery.html page with an image collection learned and created in javascript
+* Learn and use grid to replace the Flexbox for the services section images on index.html
+* Give the user the ability to book appointments, pay for services, purchase stock imagery, access private final repository of their shoots and leave reviews.
+
+## Testing
+
+### Browser Testing
+
+I tested the site in Google Chrome, Safari and Firefox and the site renders the same across all three.
+
+### HTML Validation
+
+I validated the HTML for the site using: https://validator.w3.org/. The result of my validation can be seen here: https://validator.w3.org/nu/?doc=https%3A%2F%2Fladcode2021.github.io%2Ffirst-photography-pp1%2F
+
+One warning was found:
+ 
+![](assets/images/css-section-warning-image.png)
+
+I have chosen not to address this warning as this section is an image only section. It does not require a heading. I appreciate this is non-conventional as generally a section has a heading. But I still felt that this is a section in the semantic make-up of the page.
+
+### CSS Validation
+
+I validated the CSS using: https://jigsaw.w3.org/css-validator/. The result of my validation can be seen here: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fladcode2021.github.io%2Ffirst-photography-pp1%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
+No validation errors were found.
+
+![](assets/images/css-validation-image.png)
+
+### Lighthouse Testing
+
+I generated a Lighthouse report in Chrome dev tools to see how accessible my site is. I recieved a 97 which I was very pleased with:
+
+![](assets/images/lighthouse-accessibility-image.png)
+
+## Deployment
+
+I deployed First Photography via GitHub pages following these steps:
+
+1. Click settings in the navigation menu
+2. Click pages in the menu on the left
+3. Select Main branch
+4. Select Root
+5. Click save
+
+This resulted in my site being deployed on this URL:
+
+https://ladcode2021.github.io/first-photography-pp1/
+
+
+## Credits
+
+### Code Credits
+
+Where I used code, I picked up in articles or tutorials in external resources I have marked it in the html or css. Here is a list of all the code I adapted from external sources:
+
+hr styling script taken from https://www.prodjex.com/2019/03/match-hr-width-to-text-above/
+
+Footer code taken from Love Running project and adapted. 
+
+Font Awesome used for footer icons.
+
+Form stacking CSS adapated from: https://www.w3schools.com/howto/howto_css_stacked_form.asp
+
+Some styling properties for form buttons taken from: https://www.w3schools.com/css/tryit.asp?filename=trycss_form_button
+
+Some Flexbox code adapted from https://spin.atomicobject.com/2016/06/18/vertically-center-floated-elements-flexbox/ for main sections
+
+### Image Credits
+
+I solely used Pexals and here is all of the images I used:
+
+Banner image: https://www.pexels.com/photo/baby-sleeping-on-white-cotton-161709/
+
+About us image: https://www.pexels.com/photo/baby-sitting-on-green-grass-beside-bear-plush-toy-at-daytime-1166473/
+
+About me image: https://www.pexels.com/photo/happy-ethnic-guy-with-photo-camera-near-table-with-netbook-7129661/
+
+Cake smash image: https://www.pexels.com/photo/love-woman-water-summer-5961586/
+
+Newborn shoot image: https://www.pexels.com/photo/close-up-of-hands-holding-baby-feet-325690/
+
+Religious ceremonies image: https://www.pexels.com/photo/priest-wiping-baby-head-during-baptism-ceremony-6263087/
+
+Family portait image: https://www.pexels.com/photo/couple-carrying-their-baby-girl-7678092/
+
+Gallery image 7: https://www.pexels.com/photo/baby-lying-on-white-fur-with-brown-blanket-1973270/
+
+Gallery image 8: https://www.pexels.com/photo/toddler-wearing-head-scarf-in-bed-265987/
+
+Gallery image 9: https://www.pexels.com/photo/adorable-baby-cheerful-child-459953/
+
+Gallery image 10: https://www.pexels.com/photo/silhouette-photo-of-a-mother-carrying-her-baby-at-beach-during-golden-hour-51953/
+
+Gallery image 11: https://www.pexels.com/photo/two-children-standing-near-concrete-fence-35188/
+
+Gallery image 12: https://www.pexels.com/photo/girl-in-black-and-white-overall-skirt-holding-basket-with-petaled-flowers-933186/
+
+Gallery image 13: https://www.pexels.com/photo/adorable-baby-boy-child-459905/
+
+Gallery image 14: https://www.pexels.com/photo/baby-holding-it-s-parent-finger-733880/
+
+Gallery image 15: https://www.pexels.com/photo/man-carrying-baby-drawing-their-foreheads-69096/
+
+Gallery image 16: https://www.pexels.com/photo/man-person-cute-young-2133/
+
+Gallery image 17: https://www.pexels.com/photo/toddler-girl-wearing-long-sleeved-top-reading-book-while-sitting-on-bed-860536/
+
+Gallery image: 18: https://www.pexels.com/photo/love-cute-kids-baby-50601/
+
+Gallery image 19: https://www.pexels.com/photo/laughing-baby-floating-on-air-294173/
+
+Gallery image 20: https://www.pexels.com/photo/girl-wearing-white-clothes-walking-on-pavement-road-1120106/
+
+Gallery image 21: https://www.pexels.com/photo/smiling-woman-looking-at-her-sleeping-baby-6849275/
+
+Gallery image 22: https://www.pexels.com/photo/baby-in-bathtub-1183960/
+
+Gallery image 23: https://www.pexels.com/photo/boy-wearing-blue-t-shirt-using-black-laptop-computer-in-a-dim-lighted-scenario-159533/
+
+Gallery image 24: https://www.pexels.com/photo/adult-affection-baby-child-302083/
+
+
