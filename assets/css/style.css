@@ -1,0 +1,26 @@
+/* Backgroung image - code adapted from: https://softauthor.com/css-make-background-image-full-screen/ */
+body, html {
+    height: 100%;
+    font-family: 'Ubuntu', sans-serif;
+  }
+  
+  .bg-container {
+    background-image: url("/assets/images/planet-earth-background.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  /* Global properties */
+
+  .bg-container > * {
+    margin: 30px 0;
+  }
+  
+  h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    top: 50px;
+  }

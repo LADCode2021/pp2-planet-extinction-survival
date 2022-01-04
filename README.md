@@ -177,54 +177,6 @@ Some Flexbox code adapted from https://spin.atomicobject.com/2016/06/18/vertical
 
 I solely used Pexals and here is all of the images I used:
 
-Banner image: https://www.pexels.com/photo/baby-sleeping-on-white-cotton-161709/
-
-About us image: https://www.pexels.com/photo/baby-sitting-on-green-grass-beside-bear-plush-toy-at-daytime-1166473/
-
-About me image: https://www.pexels.com/photo/happy-ethnic-guy-with-photo-camera-near-table-with-netbook-7129661/
-
-Cake smash image: https://www.pexels.com/photo/love-woman-water-summer-5961586/
-
-Newborn shoot image: https://www.pexels.com/photo/close-up-of-hands-holding-baby-feet-325690/
-
-Religious ceremonies image: https://www.pexels.com/photo/priest-wiping-baby-head-during-baptism-ceremony-6263087/
-
-Family portait image: https://www.pexels.com/photo/couple-carrying-their-baby-girl-7678092/
-
-Gallery image 7: https://www.pexels.com/photo/baby-lying-on-white-fur-with-brown-blanket-1973270/
-
-Gallery image 8: https://www.pexels.com/photo/toddler-wearing-head-scarf-in-bed-265987/
-
-Gallery image 9: https://www.pexels.com/photo/adorable-baby-cheerful-child-459953/
-
-Gallery image 10: https://www.pexels.com/photo/silhouette-photo-of-a-mother-carrying-her-baby-at-beach-during-golden-hour-51953/
-
-Gallery image 11: https://www.pexels.com/photo/two-children-standing-near-concrete-fence-35188/
-
-Gallery image 12: https://www.pexels.com/photo/girl-in-black-and-white-overall-skirt-holding-basket-with-petaled-flowers-933186/
-
-Gallery image 13: https://www.pexels.com/photo/adorable-baby-boy-child-459905/
-
-Gallery image 14: https://www.pexels.com/photo/baby-holding-it-s-parent-finger-733880/
-
-Gallery image 15: https://www.pexels.com/photo/man-carrying-baby-drawing-their-foreheads-69096/
-
-Gallery image 16: https://www.pexels.com/photo/man-person-cute-young-2133/
-
-Gallery image 17: https://www.pexels.com/photo/toddler-girl-wearing-long-sleeved-top-reading-book-while-sitting-on-bed-860536/
-
-Gallery image: 18: https://www.pexels.com/photo/love-cute-kids-baby-50601/
-
-Gallery image 19: https://www.pexels.com/photo/laughing-baby-floating-on-air-294173/
-
-Gallery image 20: https://www.pexels.com/photo/girl-wearing-white-clothes-walking-on-pavement-road-1120106/
-
-Gallery image 21: https://www.pexels.com/photo/smiling-woman-looking-at-her-sleeping-baby-6849275/
-
-Gallery image 22: https://www.pexels.com/photo/baby-in-bathtub-1183960/
-
-Gallery image 23: https://www.pexels.com/photo/boy-wearing-blue-t-shirt-using-black-laptop-computer-in-a-dim-lighted-scenario-159533/
-
-Gallery image 24: https://www.pexels.com/photo/adult-affection-baby-child-302083/
+Background image: https://www.pexels.com/photo/planet-earth-220201/
 
 
