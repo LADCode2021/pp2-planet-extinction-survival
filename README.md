@@ -13,15 +13,15 @@ I then created wireframes using Balsamiq to have a structure to work from when b
 
 ### Home
 
-![](assets/images/balsamiq-index-html-image.png)
+![](assets/images/balsamiq-screenshot-home.png)
 
 ### Survival outcome
 
-![](assets/images/balsamiq-gallery-html-image.png)
+![](assets/images/balsamiq-screenshot-survival.png)
 
 ### Death outcome
 
-![](assets/images/balsamiq-contact-html-image.png)
+![](assets/images/balsamiq-screenshot-death.png)
 
 
 ## Existing Features
