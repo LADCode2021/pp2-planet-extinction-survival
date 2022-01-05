@@ -1,53 +1,72 @@
 /* Backgroung image - code adapted from: https://softauthor.com/css-make-background-image-full-screen/ */
-body, html {
-    height: 100%;
-    /* One font used for whole site so put straight into body CSS*/
-    font-family: 'Ubuntu', sans-serif;
-  }
-  
-  .bg-container {
-    background-image: url("/assets/images/planet-earth-background.jpg");
-    height: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+body,
+html {
+  height: 100%;
+  /* One font used for whole site so put straight into body CSS*/
+  font-family: 'Ubuntu', sans-serif;
+}
 
-  /* Global properties */
+.bg-container {
+  background-image: url("/assets/images/planet-earth-background.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .bg-container > * {
-    margin: 30px 0;
-  }
+/* Global properties */
 
-  .header {
-    margin: auto;
-    width: 50%;
-    padding: 30px;
-  }
+.bg-container>* {
+  margin: 30px 0;
+}
 
-  h1 {
-    text-align: center;
-    color: white;
-    font-size: 2.5rem;
-    position: relative;
-    top: 50px;
-    clear: both;
-  }
+.header {
+  margin: auto;
+  width: 50%;
+  padding: 30px;
+}
 
-  /* CSS apapted from Love Maths walkthrough project */
-  #game-area {
-    background-color: #E6ECF0;
-    box-sizing: border-box;
-    width: 85%;
-    height: 65vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-    overflow: hidden;
+h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  position: relative;
+  top: 50px;
+  clear: both;
+}
+
+/* CSS apapted from Love Maths walkthrough project */
+#game-area {
+  background-color: #E6ECF0;
+  box-sizing: border-box;
+  width: 85%;
+  height: 65vh;
+  max-height: 450px;
+  max-width: 830px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1%;
+  overflow: scroll;
 }
 
 #game-title {
   text-align: center;
+}
+
+#question-area {
+  box-sizing: border-box;
+  background-color: white;
+  padding: 1%;
+}
+
+table,
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.lalign {
+  text-align: left;
 }

@@ -24,41 +24,91 @@
         </header>
 
         <main>
-        <section id="game-area">
-            <h2 id="game-title">AI Survival Test</h2>
+            <section id="game-area">
+                <h2 id="game-title">AI Survival Test</h2>
 
-            <div id="intro-text">
-                <p class="intro">The year is 2308 and Planet Earth is now so hot and resources are so low that the human race is
-                    facing extinction.
-                    An AI species from deep space (location not known to humans) is looking to introduce a biological
-                    species to its planet.
-                    The AI population outside of travelled leaders only communicates in mathmatical algorithms. They
-                    have travelled to Earth
-                    to recruit their new population.
-                </p>
+                <div id="intro-text">
+                    <p class="intro">The year is 2308 and Planet Earth is now so hot and resources are so low that the
+                        human race is
+                        facing extinction.
+                        An AI species from deep space (location not known to humans) is looking to introduce a
+                        biological
+                        species to its planet.
+                        The AI population outside of travelled leaders only communicates in mathmatical algorithms. They
+                        have travelled to Earth
+                        to recruit their new population.
+                    </p>
 
-                <p class="intro">To recruit humans as their biological species the AI have devised a very simple game. Answer 10
-                    questions correctly and get
-                    no more than 4 questions wrong and you will board a SpaceX rocket (yes Elon Musk is still alive in
-                    2308 and already has a place) to the unknown planet.
-                    Failure to meet this test will result in automatic death.
-                </p>
-            </div>
+                    <p class="intro">To recruit humans as their biological species the AI have devised a very simple
+                        game. Answer 10
+                        questions correctly and get
+                        no more than 4 questions wrong and you will board a SpaceX rocket (yes Elon Musk is still alive
+                        in
+                        2308 and already has a place) to the unknown planet.
+                        Failure to meet this test will result in automatic death.
+                    </p>
+                </div>
 
-            <div id="question-area">
-                <p id="random-question"></p>
-                <input type="number">
+                <div id="question-area">
 
-            </div>
+                    <table>
+                        <tr>
+                            <th class="lalign">Question</th>
+                            <th>Answer</th>
+                        </tr>
+                        <tr>
+                            <td>What does 6 to the power 0 equal?</td>
+                            <td><input type="number"></td>
+                        </tr>
 
-            <button id="submit-answer">Submit Answer</button>
+                        <tr>
+                            <td>What is the highest common factor of 30 and 132?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>How many months are there in twelve Earth years?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>Geoff thinks of a number. He deducts five from it and then divides the result by three.
+                                His answer is 25. What number did he start with?</td>
+                                <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>How many seconds are there in 12 minutes?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>Which is the closest prime number to 100?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>What is 20% of 1630?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>How many minutes are there in a quarter of a day?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>What is 80% of 295?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                        <tr>
+                            <td>How many millimetres are there in 80cm?</td>
+                            <td><input type="number"></td>
+                        </tr>
+                    </table>
 
-            <div id="scores-counter">
-                <p>Correct Answers: <span>0</span></p>
-                <p>Incorrect Answers: <span>0</span></p>
-            </div>
-        </section>
-    </main>
+                </div>
+
+                <button id="submit-answer">Submit Answer</button>
+
+                <div id="scores-counter">
+                    <p>Correct Answers: <span>0</span> Incorrect Answers: <span>0</span></p>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="assets/js/script.js"></script>
