@@ -8,11 +8,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                checkAnswer();
+            if (this.getAttribute("data-type") === "submit" && checkValidInput()) {
+                alert('The AI require all questions to be answered')
             } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(gameType);
+                checkAnswer();
             }
         });
     }
@@ -51,10 +50,19 @@ function checkAnswer() {
 
     if (qOne === answers[0]) {
         document.getElementById('a1').style.backgroundColor = 'green';
+        correctAnswerIncrement();
     } else {
         alert(`${qOne} is incorrect. You are one step closer to death`)
         document.getElementById('a1').style.backgroundColor = 'red';
+        incorrectAnswerIncrement();
     }
+
+}
+
+/**Checks if all answer fields have been filled in */
+
+function checkValidInput() {
+    inputs = document.getElementsByTagName('input').value;
 
 }
 
@@ -63,15 +71,16 @@ function checkAnswer() {
  */
 function correctAnswerIncrement() {
 
-    let oldScore = parseInt(document.getElementById("score").innerText);
-    document.getElementById("score").innerText = ++oldScore;
+    let oldScore = parseInt(document.getElementById("correct-score").innerText);
+    document.getElementById("correct-score").innerText = ++oldScore;
 }
 
 /**
  * Incremenets incorrect answers to questions
  */
 function incorrectAnswerIncrement() {
-
+    let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
+    document.getElementById("incorrect-score").innerText = ++oldScore;
 }
 
 /**
