@@ -1,6 +1,7 @@
 /* Backgroung image - code adapted from: https://softauthor.com/css-make-background-image-full-screen/ */
 body, html {
     height: 100%;
+    /* One font used for whole site so put straight into body CSS*/
     font-family: 'Ubuntu', sans-serif;
   }
   
@@ -33,6 +34,7 @@ body, html {
     clear: both;
   }
 
+  /* CSS apapted from Love Maths walkthrough project */
   #game-area {
     background-color: #E6ECF0;
     box-sizing: border-box;
@@ -45,4 +47,7 @@ body, html {
     padding: 1%;
     overflow: hidden;
 }
-  }
+
+#game-title {
+  text-align: center;
+}
