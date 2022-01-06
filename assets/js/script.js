@@ -19,9 +19,11 @@ document.addEventListener("DOMContentLoaded", function() {
     let inputs = document.getElementsByTagName("input");
 
     for (let input of inputs) {
-    input.addEventListener('focusout', function() {
-        if (this.getAttribute("data-type") === "answer") {
-            checkAnswer();
+        input.addEventListener("input", function (e) {
+            if (this.getAttribute("data-type") === "answer") {
+              let id = e.target.id;
+              let val = e.target.value;
+              checkAnswer(id, val);
             
         }
 
@@ -36,39 +38,24 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 function checkAnswer() {
 
-    let answers = [
-        1,
-        6,
-        144,
-        80,
-        720,
-        101,
-        326,
-        360,
-        236,
-        800,
-    ];
-
-    let qOne = parseInt(document.getElementById('a1').value);
-    let qTwo = parseInt(document.getElementById('a2').value);
-    let qThree = parseInt(document.getElementById('a3').value);
-    let qFour = parseInt(document.getElementById('a4').value);
-    let qFive = parseInt(document.getElementById('a5').value);
-    let qSix = parseInt(document.getElementById('a6').value);
-    let qSeven = parseInt(document.getElementById('a7').value);
-    let qEight = parseInt(document.getElementById('a8').value);
-    let qNine = parseInt(document.getElementById('a9').value);
-    let qTen = parseInt(document.getElementById('a10').value);
-
-    if (qOne === answers[0]) {
-        document.getElementById('a1').style.backgroundColor = 'green';
-        document.getElementById('a1').disabled = true;
-    } else {
-        alert(`${qOne} is incorrect. You are one step closer to death`)
-        document.getElementById('a1').style.backgroundColor = 'red';
-        incorrectAnswerIncrement();
-    }
-
+    let answers = {
+        a1: 1,
+        a2: 6,
+        a3: 144,
+        a4: 80,
+        a5: 720,
+        a6: 101,
+        a7: 326,
+        a8: 360,
+        a9: 236,
+        a10: 800,
+      };
+      let answer = answers[id];
+      if (answer == value) {
+        document.getElementById(id).style.backgroundColor = "green";
+      } else {
+        document.getElementById(id).style.backgroundColor = "red";
+      }
 }
 
 /**Checks if all answer fields have been filled in */
