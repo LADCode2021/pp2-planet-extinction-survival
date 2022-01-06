@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                 }
 
-                var buttonDel = document.getElementById('submit-answer'); 
+                let buttonDel = document.getElementById('submit-answer'); 
                 buttonDel.style.display = "none";
 
 
@@ -152,6 +152,15 @@ function incorrectAnswerIncrement() {
     document.getElementById("incorrect-score").innerText = ++oldScore;
 }
 
+
+/** Creats a button in game area to restart game */
+function createRestartButton() {
+    let buttonCreate = document.createElement('button');
+        buttonCreate.className = "submit";
+        buttonCreate.innerHTML = "Restart Game";
+        document.getElementById('game-area').appendChild(buttonCreate);
+}
+
 /**
  * Ends the game and produces the outcomes - survival or death
  */
@@ -165,6 +174,8 @@ function outcome() {
         imageCreate.alt = "Image of a grave";
         document.getElementById('game-area').innerHTML = "";
         document.getElementById('game-area').appendChild(imageCreate)
+        createRestartButton();
+
 
     }
     
@@ -177,7 +188,10 @@ function outcome() {
         videoCreate.allow = "autoplay"
         document.getElementById('game-area').innerHTML = "";
         document.getElementById('game-area').appendChild(videoCreate)
+        createRestartButton();
 
     }
 
 }
+
+

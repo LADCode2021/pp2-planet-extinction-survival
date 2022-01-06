@@ -85,7 +85,7 @@ td {
   height: 100%;
 }
 
-#submit-answer {
+.submit {
   width: 220px;
   height: 60px;
   text-transform: uppercase;
@@ -97,7 +97,7 @@ td {
   border-radius: 20px;
 }
 
-#submit-answer:active,
-#submit-answer:hover {
+.submit:active,
+.submit:hover {
   background-color: #445361;
 }
