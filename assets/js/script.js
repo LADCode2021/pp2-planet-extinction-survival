@@ -153,13 +153,14 @@ function incorrectAnswerIncrement() {
 }
 
 /**
- * Ends the game and produce the outcome - survival or death
+ * Ends the game and produces the outcomes - survival or death
  */
 function outcome() {
     
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
         let imageCreate = document.createElement('img');
         imageCreate.id = "incorrect-outcome";
+        /** Grave image taken from: https://www.pexels.com/photo/close-up-photography-of-concrete-tombstones-116909/ */
         imageCreate.src = "assets/images/grave.jpg";
         imageCreate.alt = "Image of a grave";
         document.getElementById('game-area').innerHTML = "";
