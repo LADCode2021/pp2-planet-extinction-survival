@@ -1,40 +1,110 @@
-/**Let's the DOM load before loading function.
- * Calls button to check answers.
- * This is taken from Love Math project.
+/**Let's the DOM load before loading button function.
+ * Button initiates game by deleting intro text div and appending quiz div.
+ * Loads loop to get answers from newly created quiz.
+ * This is adapted from Love Math project.
  */
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     let buttons = document.getElementsByTagName("button");
 
     for (let button of buttons) {
-        button.addEventListener("click", function() {
+        button.addEventListener("click", function () {
             if (this.getAttribute("data-type") === "submit") {
-                alert('The AI require all questions to be answered')
+                document.getElementById('intro-text').innerHTML = "";
+                let gameContent = document.createElement('div');
+                gameContent.id = 'question-area';
+                gameContent.innerHTML = `
+                <table>
+        <tr>
+            <th class="lalign">Question</th>
+            <th>Answer</th>
+        </tr>
+        <tr>
+            <td id="q1">What does 6 to the power 0 equal?</td>
+            <td><input class="answer" data-type="answer" id="a1" type="number"></td>
+        </tr>
+
+        <tr>
+            <td id="q2">What is the highest common factor of 30 and 132?</td>
+            <td><input class="answer" data-type="answer" id="a2" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q3">How many months are there in twelve Earth years?</td>
+            <td><input data-type="answer" id="a3" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q4">Geoff thinks of a number. He deducts five from it and then divides the result by three.
+                His answer is 25. What number did he start with?</td>
+                <td><input data-type="answer" id="a4" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q5">How many seconds are there in 12 minutes?</td>
+            <td><input data-type="answer" id="a5" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q6">Which is the closest prime number to 100?</td>
+            <td><input data-type="answer" id="a6" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q7">What is 20% of 1630?</td>
+            <td><input data-type="answer" id="a7" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q8">How many minutes are there in a quarter of a day?</td>
+            <td><input data-type="answer" id="a8" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q9">What is 80% of 295?</td>
+            <td><input data-type="answer" id="a9" type="number"></td>
+        </tr>
+        <tr>
+            <td id="q10">How many millimetres are there in 80cm?</td>
+            <td><input data-type="answer" id="a10" type="number"></td>
+        </tr>
+    </table>
+                `
+                document.getElementById('game-area').appendChild(gameContent)
+
+                let scoresArea = document.createElement('div');
+                scoresArea.id = 'scores-counter'
+                scoresArea.innerHTML = `
+                <p>Correct Answers: <span id="correct-score">0</span></p>
+    <p>Incorrect Answers: <span id="incorrect-score">0</span></p>
+                `
+                document.getElementById('game-area').appendChild(scoresArea)
+
+                let inputs = document.getElementsByTagName("input");
+
+                for (let input of inputs) {
+                    input.addEventListener("focusout", function (e) {
+                        let id = e.target.id;
+                        let val = e.target.value;
+                        if (val == 0) {
+
+                        } else if (this.getAttribute("data-type") === "answer") {
+
+                            checkAnswer(id, val);
+
+                        }
+
+                    })
+                }
+
+                var buttonDel = document.getElementById('submit-answer'); 
+                buttonDel.style.display = "none";
+
+
             } else {
-                checkAnswer();
+                alert('Game failed to load')
             }
         });
     }
-
-    let inputs = document.getElementsByTagName("input");
-
-    for (let input of inputs) {
-        input.addEventListener("focusout", function (e) {
-            if (this.getAttribute("data-type") === "answer") {
-              let id = e.target.id;
-              let val = e.target.value;
-              checkAnswer(id, val);
-            
-        }
-
-    })
-}
 
 });
 
 
 /**
- * Function checks users answer to questions from questionGenerator()
+ * Function checks user inputted answers from DOM
  */
 function checkAnswer(id, val) {
 
@@ -49,26 +119,20 @@ function checkAnswer(id, val) {
         a8: 360,
         a9: 236,
         a10: 800,
-      };
-      let answer = answers[id];
-      if (answer == val) {
+    };
+    let answer = answers[id];
+    if (answer == val) {
         document.getElementById(id).style.backgroundColor = "green";
         document.getElementById(id).disabled = true;
         correctAnswerIncrement();
-      } else {
+    } else {
         document.getElementById(id).style.backgroundColor = "red";
         document.getElementById(id).disabled = true;
         incorrectAnswerIncrement();
 
-      }
+    }
 }
 
-/**Checks if all answer fields have been filled in */
-
-function checkValidInput() {
-    inputs = document.getElementsByTagName('input').value;
-
-}
 
 /**
  * Incremenets correct answers to questions
