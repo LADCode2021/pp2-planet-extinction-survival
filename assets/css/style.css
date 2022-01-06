@@ -1,27 +1,19 @@
 /* Backgroung image - code adapted from: https://softauthor.com/css-make-background-image-full-screen/ */
-body,
 html {
-  height: 100%;
-  /* One font used for whole site so put straight into body CSS*/
+  /* One font used for whole site so put straight into body CSS */
   font-family: 'Ubuntu', sans-serif;
-}
-
-.bg-container {
-  background-image: url("../images/planet-earth-background.jpg");
-  background-color: black;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    min-height: 100%;
+    background-image: url('../images/planet-earth-background.jpg');
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 /* Global properties */
 
-.bg-container>* {
-  margin: 30px 0;
-}
 
-.header {
+.top-heading {
   margin: auto;
   width: 50%;
   padding: 30px;
@@ -34,6 +26,11 @@ h1 {
   position: relative;
   top: 50px;
   clear: both;
+  margin-bottom: 10%;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 /* CSS apapted from Love Maths walkthrough project */
@@ -41,17 +38,19 @@ h1 {
   background-color: #E6ECF0;
   box-sizing: border-box;
   width: 85%;
-  height: 65vh;
-  max-height: 450px;
+  max-height: 100%;
   max-width: 830px;
   margin-left: auto;
   margin-right: auto;
   padding: 1%;
-  overflow: scroll;
 }
 
 #game-title {
   text-align: center;
+}
+
+#intro-text {
+  font-size: 1.2rem;
 }
 
 #question-area {
@@ -85,13 +84,19 @@ td {
   height: 100%;
 }
 
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .submit {
   width: 220px;
   height: 60px;
   text-transform: uppercase;
   letter-spacing: 1.2px;
   color: white;
-  margin-top: 25px;
+  margin-bottom: 25px;
   background-color: #0d1013;
   border: 1px transparent;
   border-radius: 20px;

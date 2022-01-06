@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     })
                 }
 
-                let buttonDel = document.getElementById('submit-answer'); 
+                let buttonDel = document.getElementById('submit-answer');
                 buttonDel.style.display = "none";
 
 
@@ -103,9 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-/**
- * Function checks user inputted answers from DOM
- */
+/** Function checks user inputted answers from DOM */
 function checkAnswer(id, val) {
 
     let answers = {
@@ -156,30 +154,39 @@ function incorrectAnswerIncrement() {
 /** Creats a button in game area to restart game */
 function createRestartButton() {
     let buttonCreate = document.createElement('button');
-        buttonCreate.className = "submit";
-        buttonCreate.innerHTML = "Restart Game";
-        document.getElementById('game-area').appendChild(buttonCreate);
+    buttonCreate.className = "submit";
+    buttonCreate.innerHTML = "Restart Game";
+    document.getElementById('game-area').appendChild(buttonCreate);
 }
 
-/**
- * Ends the game and produces the outcomes - survival or death
- */
+/** Function reloads document to restart game */
+
+function reloadPage() {
+    window.location.reload();
+}
+
+/** Ends the game and produces the outcomes - survival or death */
 function outcome() {
-    
+
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
         let imageCreate = document.createElement('img');
         imageCreate.id = "incorrect-outcome";
-        /** Grave image taken from: https://www.pexels.com/photo/close-up-photography-of-concrete-tombstones-116909/ */
+        //Grave image taken from: https://www.pexels.com/photo/close-up-photography-of-concrete-tombstones-116909/
         imageCreate.src = "assets/images/grave.jpg";
         imageCreate.alt = "Image of a grave";
         document.getElementById('game-area').innerHTML = "";
         document.getElementById('game-area').appendChild(imageCreate)
         createRestartButton();
+        let buttons = document.getElementsByTagName("button");
 
-
-    }
-    
-    if (parseInt(document.getElementById('correct-score').innerText) > 1) {
+        for (let button of buttons) {
+            button.addEventListener("click", function () {
+                if (this.getAttribute("class") === "submit") {
+                    reloadPage();
+                }
+            })
+        }
+    } else if (parseInt(document.getElementById('correct-score').innerText) > 1) {
         let videoCreate = document.createElement('iframe');
         videoCreate.id = "correct-outcome"
         videoCreate.src = "https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770"
@@ -190,8 +197,15 @@ function outcome() {
         document.getElementById('game-area').appendChild(videoCreate)
         createRestartButton();
 
+        let buttons = document.getElementsByTagName("button");
+
+        for (let button of buttons) {
+            button.addEventListener("click", function () {
+                if (this.getAttribute("class") === "submit") {
+                    reloadPage();
+                }
+            })
+        }
     }
 
 }
-
-
