@@ -131,6 +131,7 @@ function checkAnswer(id, val) {
         incorrectAnswerIncrement();
 
     }
+    outcome()
 }
 
 
@@ -155,5 +156,14 @@ function incorrectAnswerIncrement() {
  * Ends the game and produce the outcome - survival or death
  */
 function outcome() {
+    
+    if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
+        alert('incorrect');
+    }
+    
+    if (parseInt(document.getElementById('correct-score').innerText) > 1) {
+        alert('correct')
+
+    }
 
 }
