@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let inputs = document.getElementsByTagName("input");
 
     for (let input of inputs) {
-        input.addEventListener("input", function (e) {
+        input.addEventListener("focusout", function (e) {
             if (this.getAttribute("data-type") === "answer") {
               let id = e.target.id;
               let val = e.target.value;
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
 /**
  * Function checks users answer to questions from questionGenerator()
  */
-function checkAnswer() {
+function checkAnswer(id, val) {
 
     let answers = {
         a1: 1,
@@ -51,10 +51,15 @@ function checkAnswer() {
         a10: 800,
       };
       let answer = answers[id];
-      if (answer == value) {
+      if (answer == val) {
         document.getElementById(id).style.backgroundColor = "green";
+        document.getElementById(id).disabled = true;
+        correctAnswerIncrement();
       } else {
         document.getElementById(id).style.backgroundColor = "red";
+        document.getElementById(id).disabled = true;
+        incorrectAnswerIncrement();
+
       }
 }
 
