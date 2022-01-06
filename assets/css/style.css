@@ -8,6 +8,7 @@ html {
 
 .bg-container {
   background-image: url("../images/planet-earth-background.jpg");
+  background-color: black;
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
