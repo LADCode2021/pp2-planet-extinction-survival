@@ -71,3 +71,8 @@ td {
 .lalign {
   text-align: left;
 }
+
+#incorrect-outcome {
+  width: 100%;
+  height: 100%;
+}

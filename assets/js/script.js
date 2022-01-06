@@ -158,11 +158,11 @@ function incorrectAnswerIncrement() {
 function outcome() {
     
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
-        let imageCreate = document.createElement('div');
+        let imageCreate = document.createElement('img');
         imageCreate.id = "incorrect-outcome"
-        imageCreate.innerHTML = `
-        <img id="death-outcome" src="assets/images/grave.jpg" alt="Image of a grave">
-        `;
+        imageCreate.src = "assets/images/grave.jpg"
+        imageCreate.alt = "Image of a grave"
+        imageCreate.innerHTML =
         document.getElementById('game-area').innerHTML = "";
         document.getElementById('game-area').appendChild(imageCreate)
 
