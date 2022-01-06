@@ -153,9 +153,11 @@ function incorrectAnswerIncrement() {
 
 /** Creats a button in game area to restart game */
 function createRestartButton() {
-    let buttonCreate = document.createElement('button');
-    buttonCreate.className = "submit";
-    buttonCreate.innerHTML = "Restart Game";
+    let buttonCreate = document.createElement('div');
+    buttonCreate.className = "vertical-center";
+    buttonCreate.innerHTML = `
+    <button class= "submit">Restart Game</button>
+    `
     document.getElementById('game-area').appendChild(buttonCreate);
 }
 
@@ -188,13 +190,13 @@ function outcome() {
         }
     } else if (parseInt(document.getElementById('correct-score').innerText) > 1) {
         let videoCreate = document.createElement('iframe');
-        videoCreate.id = "correct-outcome"
-        videoCreate.src = "https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770"
-        videoCreate.title = "YouTube video player"
-        videoCreate.frameBorder = '0'
-        videoCreate.allow = "autoplay"
+        videoCreate.id = "correct-outcome";
+        videoCreate.src = "https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770";
+        videoCreate.title = "YouTube video player";
+        videoCreate.frameBorder = '0';
+        videoCreate.allow = "autoplay";
         document.getElementById('game-area').innerHTML = "";
-        document.getElementById('game-area').appendChild(videoCreate)
+        document.getElementById('game-area').appendChild(videoCreate);
         createRestartButton();
 
         let buttons = document.getElementsByTagName("button");
