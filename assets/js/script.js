@@ -8,13 +8,25 @@ document.addEventListener("DOMContentLoaded", function() {
 
     for (let button of buttons) {
         button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit" && checkValidInput()) {
+            if (this.getAttribute("data-type") === "submit") {
                 alert('The AI require all questions to be answered')
             } else {
                 checkAnswer();
             }
         });
     }
+
+    let inputs = document.getElementsByTagName("input");
+
+    for (let input of inputs) {
+    input.addEventListener('focusout', function() {
+        if (this.getAttribute("data-type") === "answer") {
+            checkAnswer();
+            
+        }
+
+    })
+}
 
 });
 
@@ -50,7 +62,7 @@ function checkAnswer() {
 
     if (qOne === answers[0]) {
         document.getElementById('a1').style.backgroundColor = 'green';
-        correctAnswerIncrement();
+        document.getElementById('a1').disabled = true;
     } else {
         alert(`${qOne} is incorrect. You are one step closer to death`)
         document.getElementById('a1').style.backgroundColor = 'red';
