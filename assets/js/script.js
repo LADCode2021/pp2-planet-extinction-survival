@@ -158,7 +158,14 @@ function incorrectAnswerIncrement() {
 function outcome() {
     
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
-        alert('incorrect');
+        let imageCreate = document.createElement('div');
+        imageCreate.id = "incorrect-outcome"
+        imageCreate.innerHTML = `
+        <img id="death-outcome" src="assets/images/grave.jpg" alt="Image of a grave">
+        `;
+        document.getElementById('game-area').innerHTML = "";
+        document.getElementById('game-area').appendChild(imageCreate)
+
     }
     
     if (parseInt(document.getElementById('correct-score').innerText) > 1) {
