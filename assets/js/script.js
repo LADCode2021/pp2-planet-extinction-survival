@@ -159,17 +159,23 @@ function outcome() {
     
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
         let imageCreate = document.createElement('img');
-        imageCreate.id = "incorrect-outcome"
-        imageCreate.src = "assets/images/grave.jpg"
-        imageCreate.alt = "Image of a grave"
-        imageCreate.innerHTML =
+        imageCreate.id = "incorrect-outcome";
+        imageCreate.src = "assets/images/grave.jpg";
+        imageCreate.alt = "Image of a grave";
         document.getElementById('game-area').innerHTML = "";
         document.getElementById('game-area').appendChild(imageCreate)
 
     }
     
     if (parseInt(document.getElementById('correct-score').innerText) > 1) {
-        alert('correct')
+        let videoCreate = document.createElement('iframe');
+        videoCreate.id = "correct-outcome"
+        videoCreate.src = "https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770"
+        videoCreate.title = "YouTube video player"
+        videoCreate.frameBorder = '0'
+        videoCreate.allow = "autoplay"
+        document.getElementById('game-area').innerHTML = "";
+        document.getElementById('game-area').appendChild(videoCreate)
 
     }
 
