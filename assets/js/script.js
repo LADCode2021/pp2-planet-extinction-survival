@@ -1,107 +1,36 @@
+/*jshint esversion: 6 */
+
 /**Let's the DOM load before loading button function.
  * Button initiates game by deleting intro text div and appending quiz div.
  * Loads loop to get answers from newly created quiz.
  * This is adapted from Love Math project.
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+let buttons = document.getElementsByTagName("button");
+for (let button of buttons) {
+    button.addEventListener("click", function () {
+        if (this.getAttribute("data-type") === "submit") {
+            document.getElementById('intro-text').className = "invisible";
+            document.getElementById('question-area').className = "visible";
+            document.getElementById('submit-answer-container').className = "invisible";
+            document.getElementById('scores-counter').className = "visible";
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                document.getElementById('intro-text').innerHTML = "";
-                let gameContent = document.createElement('div');
-                gameContent.id = 'question-area';
-                gameContent.innerHTML = `
-                <table>
-        <tr>
-            <th class="lalign">Question</th>
-            <th>Answer</th>
-        </tr>
-        <tr>
-            <td id="q1">What does 6 to the power 0 equal?</td>
-            <td><input class="answer" data-type="answer" id="a1" type="number"></td>
-        </tr>
+            let inputs = document.getElementsByTagName("input");
 
-        <tr>
-            <td id="q2">What is the highest common factor of 30 and 132?</td>
-            <td><input class="answer" data-type="answer" id="a2" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q3">How many months are there in twelve Earth years?</td>
-            <td><input data-type="answer" id="a3" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q4">Geoff thinks of a number. He deducts five from it and then divides the result by three.
-                His answer is 25. What number did he start with?</td>
-                <td><input data-type="answer" id="a4" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q5">How many seconds are there in 12 minutes?</td>
-            <td><input data-type="answer" id="a5" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q6">Which is the closest prime number to 100?</td>
-            <td><input data-type="answer" id="a6" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q7">What is 20% of 1630?</td>
-            <td><input data-type="answer" id="a7" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q8">How many minutes are there in a quarter of a day?</td>
-            <td><input data-type="answer" id="a8" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q9">What is 80% of 295?</td>
-            <td><input data-type="answer" id="a9" type="number"></td>
-        </tr>
-        <tr>
-            <td id="q10">How many millimetres are there in 80cm?</td>
-            <td><input data-type="answer" id="a10" type="number"></td>
-        </tr>
-    </table>
-                `
-                document.getElementById('game-area').appendChild(gameContent)
+            for (let input of inputs) {
+                input.addEventListener("focusout", function (e) {
+                    let id = e.target.id;
+                    let val = e.target.value;
+                    if (val == 0) {
 
-                let scoresArea = document.createElement('div');
-                scoresArea.id = 'scores-counter'
-                scoresArea.innerHTML = `
-                <p>Correct Answers: <span id="correct-score">0</span></p>
-    <p>Incorrect Answers: <span id="incorrect-score">0</span></p>
-                `
-                document.getElementById('game-area').appendChild(scoresArea)
-
-                let inputs = document.getElementsByTagName("input");
-
-                for (let input of inputs) {
-                    input.addEventListener("focusout", function (e) {
-                        let id = e.target.id;
-                        let val = e.target.value;
-                        if (val == 0) {
-
-                        } else if (this.getAttribute("data-type") === "answer") {
-
-                            checkAnswer(id, val);
-
-                        }
-
-                    })
-                }
-
-                let buttonDel = document.getElementById('submit-answer');
-                buttonDel.style.display = "none";
-
-
-            } else {
-                alert('Game failed to load')
+                    } else if (this.getAttribute("data-type") === "answer") {
+                        checkAnswer(id, val);
+                    }
+                });
             }
-        });
-    }
-
-});
-
+        }
+    });
+}
 
 /** Function checks user inputted answers from DOM */
 function checkAnswer(id, val) {
@@ -129,7 +58,7 @@ function checkAnswer(id, val) {
         incorrectAnswerIncrement();
 
     }
-    outcome()
+    outcome();
 }
 
 
@@ -151,16 +80,6 @@ function incorrectAnswerIncrement() {
 }
 
 
-/** Creats a button in game area to restart game */
-function createRestartButton() {
-    let buttonCreate = document.createElement('div');
-    buttonCreate.className = "vertical-center";
-    buttonCreate.innerHTML = `
-    <button class= "submit">Restart Game</button>
-    `
-    document.getElementById('game-area').appendChild(buttonCreate);
-}
-
 /** Function reloads document to restart game */
 
 function reloadPage() {
@@ -171,14 +90,10 @@ function reloadPage() {
 function outcome() {
 
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
-        let imageCreate = document.createElement('img');
-        imageCreate.id = "incorrect-outcome";
-        //Grave image taken from: https://www.pexels.com/photo/close-up-photography-of-concrete-tombstones-116909/
-        imageCreate.src = "assets/images/grave.jpg";
-        imageCreate.alt = "Image of a grave";
-        document.getElementById('game-area').innerHTML = "";
-        document.getElementById('game-area').appendChild(imageCreate)
-        createRestartButton();
+        document.getElementById('question-area').className = "invisible";
+        document.getElementById('scores-counter').className = "invisible";
+        document.getElementById('grave-image-container').className = "visible";
+        document.getElementById('restart-button').className = "vertical-center";
         let buttons = document.getElementsByTagName("button");
 
         for (let button of buttons) {
@@ -186,18 +101,13 @@ function outcome() {
                 if (this.getAttribute("class") === "submit") {
                     reloadPage();
                 }
-            })
+            });
         }
     } else if (parseInt(document.getElementById('correct-score').innerText) > 1) {
-        let videoCreate = document.createElement('iframe');
-        videoCreate.id = "correct-outcome";
-        videoCreate.src = "https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770";
-        videoCreate.title = "YouTube video player";
-        videoCreate.frameBorder = '0';
-        videoCreate.allow = "autoplay";
-        document.getElementById('game-area').innerHTML = "";
-        document.getElementById('game-area').appendChild(videoCreate);
-        createRestartButton();
+        document.getElementById('question-area').className = "invisible";
+        document.getElementById('scores-counter').className = "invisible";
+        document.getElementById('video-container').className = "visible";
+        document.getElementById('restart-button').className = "vertical-center";
 
         let buttons = document.getElementsByTagName("button");
 
@@ -206,7 +116,7 @@ function outcome() {
                 if (this.getAttribute("class") === "submit") {
                     reloadPage();
                 }
-            })
+            });
         }
     }
 

@@ -23,7 +23,7 @@
         <section id="game-area">
             <h2 id="game-title">AI Survival Test</h2>
 
-            <div id="intro-text">
+            <div class="visible" id="intro-text">
                 <p class="intro">The year is 2308 and Planet Earth is now so hot and resources are so low that the
                     human race is facing extinction. An AI species from deep space (location not known to humans) is
                     looking to introduce a biological species to its planet. The AI population outside of travelled
@@ -40,7 +40,78 @@
                 </p>
             </div>
 
-            <div class="vertical-center"><button class="submit" data-type="submit" type="button" id="submit-answer">Start Test</button></div>
+            <div id="submit-answer-container" class="vertical-center"><button class="submit" data-type="submit"
+                    type="button" id="submit-answer">Start Test</button></div>
+
+            <div class="invisible" id="question-area">
+                <table>
+                    <tr>
+                        <th class="lalign">Question</th>
+                        <th>Answer</th>
+                    </tr>
+                    <tr>
+                        <td id="q1">What does 6 to the power 0 equal?</td>
+                        <td><input class="answer" data-type="answer" id="a1" type="number"></td>
+                    </tr>
+
+                    <tr>
+                        <td id="q2">What is the highest common factor of 30 and 132?</td>
+                        <td><input class="answer" data-type="answer" id="a2" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q3">How many months are there in twelve Earth years?</td>
+                        <td><input data-type="answer" id="a3" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q4">Geoff thinks of a number. He deducts five from it and then divides the result by
+                            three.
+                            His answer is 25. What number did he start with?</td>
+                        <td><input data-type="answer" id="a4" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q5">How many seconds are there in 12 minutes?</td>
+                        <td><input data-type="answer" id="a5" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q6">Which is the closest prime number to 100?</td>
+                        <td><input data-type="answer" id="a6" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q7">What is 20% of 1630?</td>
+                        <td><input data-type="answer" id="a7" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q8">How many minutes are there in a quarter of a day?</td>
+                        <td><input data-type="answer" id="a8" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q9">What is 80% of 295?</td>
+                        <td><input data-type="answer" id="a9" type="number"></td>
+                    </tr>
+                    <tr>
+                        <td id="q10">How many millimetres are there in 80cm?</td>
+                        <td><input data-type="answer" id="a10" type="number"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="invisible" id="scores-counter">
+                <p>Correct Answers: <span id="correct-score">0</span></p>
+                <p>Incorrect Answers: <span id="incorrect-score">0</span></p>
+            </div>
+
+            <div class="invisible" id="grave-image-container">
+                <img id="incorrect-outcome" src="assets/images/grave.jpg" alt="Image of a grave">
+            </div>
+
+            <div class="invisible" id="video-container">
+                <iframe width="100%" height="500px" src="https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            </div>
+
+            <div id="restart-button" class="invisible"><button class="submit">Restart Game</button></div>
         </section>
     </main>
 
