@@ -91,6 +91,7 @@ function outcome() {
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
         document.getElementById('question-area').className = "invisible";
         document.getElementById('incorrect-outcome-area').className = "visible";
+        document.getElementsByClassName('intro-title').className = "intro-title red";
 
         //Logic adapted from Love Math project and will throw JS Hint error. Avoiding this will be shown in later modules.
         let buttons = document.getElementsByTagName("button");
@@ -105,6 +106,7 @@ function outcome() {
     } else if (parseInt(document.getElementById('correct-score').innerText) > 1) {
         document.getElementById('question-area').className = "invisible";
         document.getElementById('correct-outcome-area').className = "visible";
+        document.getElementsByClassName('intro-title').className = "intro-title green";
 
         //Logic adapted from Love Math project and will throw JS Hint error. Avoiding this will be shown in later modules.
         let buttons = document.getElementsByTagName("button");

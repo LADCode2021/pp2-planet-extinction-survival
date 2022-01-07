@@ -21,7 +21,7 @@
 
     <main>
         <section class="visible" id="intro-area">
-            <h2 id="intro-title">Welcome to your AI Survival Test</h2>
+            <h2 class="intro-title">Welcome to your AI Survival Test</h2>
 
             <div id="intro-text">
                 <p class="intro">The year is 2308 and Planet Earth is now so hot and resources are so low that the
@@ -46,7 +46,19 @@
         </section>
 
         <section class="invisible" id="question-area">
-            <h2 id="game-title">AI Survival Test</h2>
+            <h2 class="intro-title">AI Survival Test</h2>
+
+            <div id="game-instructions">
+                <ul>
+                    <li>You must answer at least 5 questions correclty to survive and get to the International Space
+                        Station.</li>
+                    <li>Answer more than 5 questions wrong and you will go straight to your grave.</li>
+                    <li>You have 1 attempt at each question. Once you leave the answer box the AI take that as your
+                        final answer.</li>
+                </ul>
+                <p><strong>Hint:</strong> all of these answers are integers. The AI do not accept any words as
+                    answers.</p>
+            </div>
 
             <div id="question-table">
                 <table>
@@ -108,6 +120,8 @@
 
         <section class="invisible" id="incorrect-outcome-area">
 
+            <h2 class="intro-title red">Bye Bye! You have been sent straight to your grave.</h2>
+
             <div id="grave-image-container">
                 <img id="incorrect-outcome" src="assets/images/grave.jpg" alt="Image of a grave">
             </div>
@@ -116,6 +130,7 @@
         </section>
 
         <section class="invisible" id="correct-outcome-area">
+            <h2 class="intro-title green">Congratulations! You have made it aboard a SpaceX rocket to the International Space Station</h2>
 
             <div id="video-container">
                 <iframe width="100%" height="500px"
