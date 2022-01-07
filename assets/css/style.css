@@ -1,4 +1,5 @@
-/* Backgroung image - code adapted from: https://softauthor.com/css-make-background-image-full-screen/ */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
 html {
   /* One font used for whole site so put straight into html CSS */
   font-family: 'Ubuntu', sans-serif;
@@ -47,12 +48,15 @@ h2 {
 
 /* Button CSS */
 
+/* Very loosely adapted from https://www.w3schools.com/howto/howto_css_center-vertical.asp */
 .vertical-center {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 20px;
 }
+
+/* Adapated from Love Math walkthrough project*/
 .submit {
   width: 220px;
   height: 60px;

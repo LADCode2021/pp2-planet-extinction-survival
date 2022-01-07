@@ -66,6 +66,7 @@ function checkAnswer(id, val) {
  */
 function correctAnswerIncrement() {
 
+//Adapted from Love Running walkthrough project
     let oldScore = parseInt(document.getElementById("correct-score").innerText);
     document.getElementById("correct-score").innerText = ++oldScore;
 }
@@ -74,6 +75,8 @@ function correctAnswerIncrement() {
  * Incremenets incorrect answers to questions
  */
 function incorrectAnswerIncrement() {
+    
+    //Adapted from Love Running walkthrough project
     let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++oldScore;
 }
