@@ -2,12 +2,12 @@
 html {
   /* One font used for whole site so put straight into body CSS */
   font-family: 'Ubuntu', sans-serif;
-    min-height: 100%;
-    background-image: url('../images/planet-earth-background.jpg');
-    background-color: black;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+  min-height: 100%;
+  background-image: url('../images/planet-earth-background.jpg');
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 /* Global properties */
@@ -34,7 +34,10 @@ h2 {
 }
 
 /* CSS apapted from Love Maths walkthrough project */
-#game-area {
+#intro-area,
+#question-area,
+#incorrect-outcome-area,
+#correct-outcome-area {
   background-color: #E6ECF0;
   box-sizing: border-box;
   width: 85%;
@@ -53,7 +56,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-#question-area {
+#question-table {
   box-sizing: border-box;
   background-color: white;
   padding: 1%;

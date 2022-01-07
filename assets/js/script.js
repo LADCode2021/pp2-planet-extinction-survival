@@ -1,20 +1,19 @@
 /*jshint esversion: 6 */
 
-/**Let's the DOM load before loading button function.
+/**
  * Button initiates game by deleting intro text div and appending quiz div.
  * Loads loop to get answers from newly created quiz.
- * This is adapted from Love Math project.
  */
 
+//Logic adapted from Love Math project and will throw JS Hint error. Avoiding this will be shown in later modules.
 let buttons = document.getElementsByTagName("button");
 for (let button of buttons) {
     button.addEventListener("click", function () {
         if (this.getAttribute("data-type") === "submit") {
-            document.getElementById('intro-text').className = "invisible";
+            document.getElementById('intro-area').className = "invisible";
             document.getElementById('question-area').className = "visible";
-            document.getElementById('submit-answer-container').className = "invisible";
-            document.getElementById('scores-counter').className = "visible";
 
+            //Logic adapted from Love Math project and will throw JS Hint error. Avoiding this will be shown in later modules.
             let inputs = document.getElementsByTagName("input");
 
             for (let input of inputs) {
@@ -91,9 +90,9 @@ function outcome() {
 
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
         document.getElementById('question-area').className = "invisible";
-        document.getElementById('scores-counter').className = "invisible";
-        document.getElementById('grave-image-container').className = "visible";
-        document.getElementById('restart-button').className = "vertical-center";
+        document.getElementById('incorrect-outcome-area').className = "visible";
+
+        //Logic adapted from Love Math project and will throw JS Hint error. Avoiding this will be shown in later modules.
         let buttons = document.getElementsByTagName("button");
 
         for (let button of buttons) {
@@ -105,10 +104,9 @@ function outcome() {
         }
     } else if (parseInt(document.getElementById('correct-score').innerText) > 1) {
         document.getElementById('question-area').className = "invisible";
-        document.getElementById('scores-counter').className = "invisible";
-        document.getElementById('video-container').className = "visible";
-        document.getElementById('restart-button').className = "vertical-center";
+        document.getElementById('correct-outcome-area').className = "visible";
 
+        //Logic adapted from Love Math project and will throw JS Hint error. Avoiding this will be shown in later modules.
         let buttons = document.getElementsByTagName("button");
 
         for (let button of buttons) {

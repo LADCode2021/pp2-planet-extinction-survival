@@ -20,10 +20,10 @@
     </header>
 
     <main>
-        <section id="game-area">
-            <h2 id="game-title">AI Survival Test</h2>
+        <section class="visible" id="intro-area">
+            <h2 id="intro-title">Welcome to your AI Survival Test</h2>
 
-            <div class="visible" id="intro-text">
+            <div id="intro-text">
                 <p class="intro">The year is 2308 and Planet Earth is now so hot and resources are so low that the
                     human race is facing extinction. An AI species from deep space (location not known to humans) is
                     looking to introduce a biological species to its planet. The AI population outside of travelled
@@ -40,10 +40,15 @@
                 </p>
             </div>
 
-            <div id="submit-answer-container" class="vertical-center"><button class="submit" data-type="submit"
-                    type="button" id="submit-answer">Start Test</button></div>
+            <div id="submit-answer-container" class="vertical-center">
+                <button class="submit" data-type="submit" type="button" id="submit-answer">Start Test</button>
+            </div>
+        </section>
 
-            <div class="invisible" id="question-area">
+        <section class="invisible" id="question-area">
+            <h2 id="game-title">AI Survival Test</h2>
+
+            <div id="question-table">
                 <table>
                     <tr>
                         <th class="lalign">Question</th>
@@ -95,24 +100,36 @@
                 </table>
             </div>
 
-            <div class="invisible" id="scores-counter">
+            <div id="scores-counter">
                 <p>Correct Answers: <span id="correct-score">0</span></p>
                 <p>Incorrect Answers: <span id="incorrect-score">0</span></p>
             </div>
+        </section>
 
-            <div class="invisible" id="grave-image-container">
+        <section class="invisible" id="incorrect-outcome-area">
+
+            <div id="grave-image-container">
                 <img id="incorrect-outcome" src="assets/images/grave.jpg" alt="Image of a grave">
             </div>
 
-            <div class="invisible" id="video-container">
-                <iframe width="100%" height="500px" src="https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <div class="vertical-center"><button class="submit">Restart Game</button></div>
+        </section>
+
+        <section class="invisible" id="correct-outcome-area">
+
+            <div id="video-container">
+                <iframe width="100%" height="500px"
+                    src="https://www.youtube.com/embed/WZvtrnFItNs?controls=0&amp;start=15770"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
 
-            <div id="restart-button" class="invisible"><button class="submit">Restart Game</button></div>
+            <div class="vertical-center"><button class="submit">Restart Game</button></div>
         </section>
+
+
+
     </main>
 
     <script src="assets/js/script.js"></script>
