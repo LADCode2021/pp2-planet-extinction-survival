@@ -20,9 +20,9 @@ for (let button of buttons) {
                 input.addEventListener("focusout", function (e) {
                     let id = e.target.id;
                     let val = e.target.value;
-                    if (val == 0) {
+                    if (val === null) {
 
-                    } else if (this.getAttribute("data-type") === "answer") {
+                    } else if (this.getAttribute("data-type") === "answer" && val.length >= 1) {
                         checkAnswer(id, val);
                     }
                 });
@@ -35,6 +35,7 @@ for (let button of buttons) {
 function checkAnswer(id, val) {
 
     let answers = {
+        a0: 0,
         a1: 1,
         a2: 6,
         a3: 144,
@@ -55,8 +56,8 @@ function checkAnswer(id, val) {
         document.getElementById(id).style.backgroundColor = "red";
         document.getElementById(id).disabled = true;
         incorrectAnswerIncrement();
-
     }
+
     outcome();
 }
 
