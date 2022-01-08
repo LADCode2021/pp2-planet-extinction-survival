@@ -96,7 +96,7 @@ h2 {
   text-align: center;
 }
 
-#intro-text {
+.intro-text {
   font-size: 1.2rem;
 }
 
@@ -113,7 +113,9 @@ h2 {
   color: green;
 }
 
-
+.center-container {
+  
+}
 
 /* Table CSS for quiz */
 table,
