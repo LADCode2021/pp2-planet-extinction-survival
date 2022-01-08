@@ -134,7 +134,7 @@ Button centering very loosely based on: https://www.w3schools.com/howto/howto_cs
 I solely used Pexals and here is all of the images I used:
 
 Background image: https://www.pexels.com/photo/planet-earth-220201/
-Grave image: https://www.pexels.com/photo/close-up-photography-of-concrete-tombstones-116909/
+Volcano image: https://www.pexels.com/photo/iceland-snow-landscape-nature-8905098/
 
 ### Video Credits
 

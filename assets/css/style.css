@@ -98,6 +98,7 @@ h2 {
 
 .intro-text {
   font-size: 1.2rem;
+  margin: 5px;
 }
 
 .intro-title {
@@ -111,10 +112,6 @@ h2 {
 
 .green {
   color: green;
-}
-
-.center-container {
-  
 }
 
 /* Table CSS for quiz */
@@ -144,3 +141,24 @@ td {
   height: 100%;
 }
 
+@media (max-width: 400px) {
+
+header {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.intro-text {
+  font-size: 1rem;
+}
+
+
+
+}
