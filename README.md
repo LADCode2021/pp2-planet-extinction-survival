@@ -80,13 +80,9 @@ I tested the site in Google Chrome, Safari and Firefox and the site renders the 
 
 ### HTML Validation
 
-I validated the HTML for the site using: https://validator.w3.org/. The result of my validation can be seen here: https://validator.w3.org/nu/?doc=https%3A%2F%2Fladcode2021.github.io%2Ffirst-photography-pp1%2F
+I validated the HTML for the site using: https://validator.w3.org/. The result of my validation can be seen here: https://validator.w3.org/nu/?doc=https%3A%2F%2Fladcode2021.github.io%2Fpp2-planet-extinction-survival%2F
 
-One warning was found:
- 
-![](assets/images/css-section-warning-image.png)
-
-I have chosen not to address this warning as this section is an image only section. It does not require a heading. I appreciate this is non-conventional as generally a section has a heading. But I still felt that this is a section in the semantic make-up of the page.
+The site has 0 errors.
 
 ### CSS Validation
 
