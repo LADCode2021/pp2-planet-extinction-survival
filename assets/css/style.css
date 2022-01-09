@@ -114,6 +114,11 @@ h2 {
   color: green;
 }
 
+iframe {
+  height: 500px;
+  width: 100%;
+}
+
 /* Table CSS for quiz */
 table,
 th,
@@ -141,6 +146,15 @@ td {
   height: 100%;
 }
 
+/* For medium to smaller screens below 500px */
+@media (max-width: 500px) { 
+  iframe {
+    height: 350px;
+  
+  }
+
+
+/* For smaller screens below 400px */
 @media (max-width: 400px) {
 
 header {
@@ -159,6 +173,16 @@ h2 {
   font-size: 1rem;
 }
 
+iframe {
+  height: auto;
+}
 
+}
 
+/* For smaller screens below 320px */
+@media (max-width: 320px) {
+  table, th, td {
+    padding: 5px;
+    font-size: 0.8rem;
+  }
 }

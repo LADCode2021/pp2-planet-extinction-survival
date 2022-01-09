@@ -47,6 +47,7 @@ function checkAnswer(id, val) {
         a9: 236,
         a10: 800,
     };
+
     let answer = answers[id];
     if (answer == val) {
         document.getElementById(id).style.backgroundColor = "green";
@@ -57,7 +58,6 @@ function checkAnswer(id, val) {
         document.getElementById(id).disabled = true;
         incorrectAnswerIncrement();
     }
-
     outcome();
 }
 
@@ -67,7 +67,7 @@ function checkAnswer(id, val) {
  */
 function correctAnswerIncrement() {
 
-//Adapted from Love Running walkthrough project
+    //Adapted from Love Running walkthrough project
     let oldScore = parseInt(document.getElementById("correct-score").innerText);
     document.getElementById("correct-score").innerText = ++oldScore;
 }
@@ -76,7 +76,7 @@ function correctAnswerIncrement() {
  * Incremenets incorrect answers to questions
  */
 function incorrectAnswerIncrement() {
-    
+
     //Adapted from Love Running walkthrough project
     let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
     document.getElementById("incorrect-score").innerText = ++oldScore;
@@ -123,5 +123,4 @@ function outcome() {
             });
         }
     }
-
 }
