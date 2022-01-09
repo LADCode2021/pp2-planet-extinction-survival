@@ -5,7 +5,7 @@ The site is fully responsive Javascript game where depending on how many questio
 
 [IS MY SITE RESPONSIVE IMAGE]
 
-The site is deployed here:
+The site is deployed here: https://ladcode2021.github.io/pp2-planet-extinction-survival/
 
 ## Planning
 
@@ -82,11 +82,11 @@ I tested the site in Google Chrome, Safari and Firefox and the site renders the 
 
 I validated the HTML for the site using: https://validator.w3.org/. The result of my validation can be seen here: https://validator.w3.org/nu/?doc=https%3A%2F%2Fladcode2021.github.io%2Fpp2-planet-extinction-survival%2F
 
-The site has 0 errors.
+No validation errors were found.
 
 ### CSS Validation
 
-I validated the CSS using: https://jigsaw.w3.org/css-validator/. The result of my validation can be seen here: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fladcode2021.github.io%2Ffirst-photography-pp1%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+I validated the CSS using: https://jigsaw.w3.org/css-validator/. The result of my validation can be seen here: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fladcode2021.github.io%2Fpp2-planet-extinction-survival%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
 
 No validation errors were found.
 
@@ -110,7 +110,9 @@ I deployed First Photography via GitHub pages following these steps:
 
 This resulted in my site being deployed on this URL:
 
-https://ladcode2021.github.io/first-photography-pp1/
+https://ladcode2021.github.io/pp2-planet-extinction-survival/
+
+To run locally, you can clone this repository directly into the editor of your choice by pasting git clone https://github.com/LADCode2021/pp2-planet-extinction-survival.git into your terminal. To stop using the existing GitHub repository, type git remote rm origin into the terminal.
 
 
 ## Credits
