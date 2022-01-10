@@ -135,7 +135,7 @@ I validated the JavaScript using: https://jshint.com. It produced 0 errors but d
 
 ### Lighthouse Testing
 
-I generated a Lighthouse report in Chrome dev tools to see how accessible my site is. I received a 100/100 which I was very pleased with:
+I tested the site across multiple screen sizes including right down to the smallest available in Google Chrome (iPhone 5). I used multiple media queries in my style.css to account for any responsiveness issues and it now scales well on all screen sizes. I then generated a Lighthouse report in Chrome dev tools to see how accessible my site is. I received a 100/100 which I was very pleased with:
 
 ![](docs/images/lighthouse-report-screenshot.png)
 
