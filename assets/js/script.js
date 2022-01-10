@@ -67,7 +67,7 @@ function checkAnswer(id, val) {
 function correctAnswerIncrement() {
 
     //Adapted from Love Running walkthrough project
-    let oldScore = parseInt(document.getElementById("correct-score").innerText);
+    let oldScore = parseInt(document.getElementById("correct-score").innerText); //parseInt required to esnure strict equality of datatype between js and html
     document.getElementById("correct-score").innerText = ++oldScore;
 }
 
@@ -77,7 +77,7 @@ function correctAnswerIncrement() {
 function incorrectAnswerIncrement() {
 
     //Adapted from Love Running walkthrough project
-    let oldScore = parseInt(document.getElementById("incorrect-score").innerText);
+    let oldScore = parseInt(document.getElementById("incorrect-score").innerText); //parseInt required to esnure strict equality of datatype between js and html
     document.getElementById("incorrect-score").innerText = ++oldScore;
 }
 
@@ -91,7 +91,8 @@ function reloadPage() {
 /** Ends the game and produces the outcomes - survival or death */
 function decideOutcome() {
 
-    if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
+
+    if (parseInt(document.getElementById('incorrect-score').innerText) > 4) { //parseInt required to esnure strict equality of datatype between js and html
         document.getElementById('question-area').className = "invisible";
         document.getElementById('incorrect-outcome-area').className = "visible";
         document.getElementsByClassName('intro-title').className = "intro-title red";
@@ -106,7 +107,7 @@ function decideOutcome() {
                 }
             });
         }
-    } else if (parseInt(document.getElementById('correct-score').innerText) == 6) {
+    } else if (parseInt(document.getElementById('correct-score').innerText) === 6) { //parseInt required to esnure strict equality of datatype between js and html
         document.getElementById('question-area').className = "invisible";
         document.getElementById('correct-outcome-area').className = "visible";
         document.getElementsByClassName('intro-title').className = "intro-title green";
