@@ -31,7 +31,11 @@ for (let button of buttons) {
     });
 }
 
-/** Function checks user inputted answers from DOM */
+/** 
+ * Function checks user inputted answers from DOM
+ * @param id: the id of the input fields for user inputted answers
+ * @param val: the value of the user input from input fields
+ */
 function checkAnswer(id, val) {
 
     let answers = {
@@ -82,13 +86,17 @@ function incorrectAnswerIncrement() {
 }
 
 
-/** Function reloads document to restart game */
+/** 
+ * Function reloads document to restart game 
+ */
 
 function reloadPage() {
     window.location.reload();
 }
 
-/** Ends the game and produces the outcomes - survival or death */
+/** 
+ * Ends the game and produces the outcomes - survival or left on Earth 
+ */
 function decideOutcome() {
 
 
