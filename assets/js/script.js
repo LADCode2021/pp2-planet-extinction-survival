@@ -35,7 +35,6 @@ for (let button of buttons) {
 function checkAnswer(id, val) {
 
     let answers = {
-        a0: 0,
         a1: 1,
         a2: 6,
         a3: 144,
@@ -107,7 +106,7 @@ function outcome() {
                 }
             });
         }
-    } else if (parseInt(document.getElementById('correct-score').innerText) > 1) {
+    } else if (parseInt(document.getElementById('correct-score').innerText) == 6) {
         document.getElementById('question-area').className = "invisible";
         document.getElementById('correct-outcome-area').className = "visible";
         document.getElementsByClassName('intro-title').className = "intro-title green";

@@ -3,7 +3,7 @@ Planet Extinction Survival is a made-up game where the world is about to end and
 
 The site is fully responsive Javascript game and depending on how many questions the user gets right or wrong will depend on the outcome of the game.
 
-![](assets/images/am-i-responsive-screenshot.png)
+![](docs/images/am-i-responsive-screenshot.png)
 
 The site is deployed here: https://ladcode2021.github.io/pp2-planet-extinction-survival/
 
@@ -13,15 +13,15 @@ I created wireframes using Balsamiq to have a structure to work from when buildi
 
 ### Home
 
-![](assets/images/balsamiq-screenshot-home.png)
+![](docs/images/balsamiq-screenshot-home.png)
 
 ### Survival outcome
 
-![](assets/images/balsamiq-screenshot-survival.png)
+![](docs/images/balsamiq-screenshot-survival.png)
 
 ### Death outcome
 
-![](assets/images/balsamiq-screenshot-death.png)
+![](docs/images/balsamiq-screenshot-death.png)
 
 
 ## Existing Features
@@ -38,7 +38,7 @@ The header is a simple text header which sits nicely on top of the background im
 
 For medium and smaller screens, the header is responsives and collapes onto 3 lines centred.
 
-![](assets/images/header-screenshot.png)
+![](docs/images/header-screenshot.png)
 
 
 ### Game Introduction
@@ -47,7 +47,7 @@ When the page first loads there is an area in the middle of the main background 
 
 For smaller and medium screens the area is responsonsive.
 
-![](assets/images/intro-page-screenshot.png)
+![](docs/images/intro-page-screenshot.png)
 
 ### Quiz game
 
@@ -57,7 +57,7 @@ Once a user enters an answer to a question using JavaScript the site automatical
 
 For smaller and medium screens the quiz table scales well until it reaches screens below 320px. To account for this there is a media query which reduces font-size and padding to continue being responsive under 320px.
 
-![](assets/images/quiz-page-screenshot.png)
+![](docs/images/quiz-page-screenshot.png)
 
 ### Survival Outcome
 
@@ -67,7 +67,7 @@ The user also has the option to restart the game with a button centered below th
 
 The page is still fully responsive and the video reduces in height for smaller and medium screens.
 
-![](assets/images/game-win-screnshot.png)
+![](docs/images/game-win-screnshot.png)
 
 ### Incorrect Outcome
 
@@ -77,7 +77,7 @@ The user also has the option to restart the game with a button centered below th
 
 The page is still fully responsive and the image automatically scales for smaller and medium screens.
 
-![](assets/images/game-lose-screenshot.png)
+![](docs/images/game-lose-screenshot.png)
 
 ## Future Features
 
@@ -96,11 +96,11 @@ There are changes/features I would like to include in future. For example:
 
 When a family member tested the game they found that if they answered '0' it was not registered or validated by the game. This can be seen below:
 
-![](assets/images/0-game-error.png)
+![](docs/images/0-game-error.png)
 
 I manged to fix this by changing the conditions upon which the JavaScipt is triggered to run the checkAnswer() function. Previous to this an if condition was set to do nothing if the input boxes were '== 0' to allow the user to click in and out of boxes without registering them as incorrect scores before they'd inputted an answer. This was because the event listener is set to run the checkAnswer function when a user leaves the input field. To fix this I changed the '== 0' to '=== null' to stop it checking for 0 at all. This did re-introduce the problem that if a user clicked in and out of a box without inputting an answer it would mark it as wrong an incremenet a wrong answer. To fix this I changed the proceedoing else if to run the checkASnswer function if the value of the answer was greater than or = to 1 ('val.length >= 1'). The final JavaScript code is illustrated below:
 
-![](assets/images/0-game-error-js-fix.png)
+![](docs/images/0-game-error-js-fix.png)
 
 ### Browser Testing
 
@@ -110,34 +110,34 @@ I tested the site in Google Chrome, Safari and Firefox and the site renders the 
 
 I validated the HTML for the site using: https://validator.w3.org/. I did initially recieve an error becuase I had frameborder properties in a video iframe. The code for the iframe is supplied by YouTube interestingly.
 
-![](assets/images/frameborder-html-error.png)
+![](docs/images/frameborder-html-error.png)
 
 I removed this property and re-ran the validation and the result of my validation can be seen here: https://validator.w3.org/nu/?doc=https%3A%2F%2Fladcode2021.github.io%2Fpp2-planet-extinction-survival%2F. No validation errors were found.
 
 
-![](assets/images/no-html-errors.png)
+![](docs/images/no-html-errors.png)
 
 ### CSS Validation
 
 I validated the CSS using: https://jigsaw.w3.org/css-validator/. I did initially recieve a 'parse' error. This was due to me not closing out my first set of media queries correctly.
 
-![](assets/images/parse-error-css.png)
+![](docs/images/parse-error-css.png)
 
 I fixed this error by closing out the media query correctly and re-ran the validation and the result of my validation can be seen here: https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fladcode2021.github.io%2Fpp2-planet-extinction-survival%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en. No validation errors were found.
 
-![](assets/images/no-css-errors.png)
+![](docs/images/no-css-errors.png)
 
 ### Javascript Validation
 
 I validated the JavaScript using: https://jshint.com. It produced 0 errors but did give 4 warnings. All of them were this: 'Functions declared within loops referencing an outer scoped variable may lead to confusing semantics.' I decided not to try to fix these warnings as the warning is coming from code I adapted from the Love Maths walkthrough project. The tutor in one of the videos also recieves this warning and says there is a workaround but it goes into JavaScript concepts we haven't yet been taught yet.
 
-![](assets/images/js-hint-screenshot.png)
+![](docs/images/js-hint-screenshot.png)
 
 ### Lighthouse Testing
 
 I generated a Lighthouse report in Chrome dev tools to see how accessible my site is. I recieved a 100 which I was very pleased with:
 
-![](assets/images/lighthouse-report-screenshot.png)
+![](docs/images/lighthouse-report-screenshot.png)
 
 ## Deployment
 
