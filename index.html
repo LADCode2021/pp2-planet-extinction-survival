@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Planet Extinction Survival</title>
+    <title>Planet Extinction Survival Game</title>
 </head>
 
 <body>
@@ -17,6 +17,7 @@
     </header>
 
     <main>
+        <!-- Introductory text section that is visible when page first loads. Gives background story and CTA to start game -->
         <section class="visible" id="intro-area">
             <h2 class="intro-title">Welcome to your Survival Test</h2>
 
@@ -44,6 +45,7 @@
             </div>
         </section>
 
+        <!-- Quiz section that becomes visible when the user clicks the button to start the game in previous section -->
         <section class="invisible" id="question-area">
             <h2 class="intro-title">AI Survival Test</h2>
 
@@ -110,12 +112,14 @@
                 </table>
             </div>
 
+            <!-- Keeps track of users score on the quiz and is used in script.js to produce the outcome of the game -->
             <div id="scores-counter">
                 <p>Correct Answers: <span id="correct-score">0</span></p>
                 <p>Incorrect Answers: <span id="incorrect-score">0</span></p>
             </div>
         </section>
 
+        <!-- Section only visible if user scores too many wrong -->
         <section class="invisible" id="incorrect-outcome-area">
 
             <h2 class="intro-title red">Access denied</h2>
@@ -128,9 +132,11 @@
                 <img id="incorrect-outcome" src="assets/images/volcano.jpg" alt="Image of a volcano">
             </div>
 
+            <!-- Allows user to restart game -->
             <div class="vertical-center"><button class="submit">Restart Game</button></div>
         </section>
 
+        <!-- Section only visible if user scores correct number of questions -->
         <section class="invisible" id="correct-outcome-area">
             <h2 class="intro-title green">Congratulations!</h2>
 
@@ -147,11 +153,13 @@
                 </iframe>
             </div>
 
+            <!-- Allows user to restart game -->
             <div class="vertical-center"><button class="submit">Restart Game</button></div>
         </section>
 
     </main>
 
+    <!-- Loads script.js after header and body are loaded -->
     <script src="assets/js/script.js"></script>
 </body>
 
