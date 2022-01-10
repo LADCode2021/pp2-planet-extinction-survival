@@ -57,7 +57,7 @@ function checkAnswer(id, val) {
         document.getElementById(id).disabled = true;
         incorrectAnswerIncrement();
     }
-    outcome();
+    decideOutcome();
 }
 
 
@@ -89,7 +89,7 @@ function reloadPage() {
 }
 
 /** Ends the game and produces the outcomes - survival or death */
-function outcome() {
+function decideOutcome() {
 
     if (parseInt(document.getElementById('incorrect-score').innerText) > 4) {
         document.getElementById('question-area').className = "invisible";
